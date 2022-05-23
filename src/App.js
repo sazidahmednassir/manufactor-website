@@ -7,13 +7,14 @@ import Login from './Pages/Login/Login';
 import RequireAuth from './Pages/Login/RequireAuth';
 import SignUp from './Pages/Login/SignUp';
 import MyPortfolio from './Pages/MyPortfolio/MyPortfolio';
+import AllProducts from './Pages/Products/AllProducts';
 import PurchasePage from './Pages/Products/PurchasePage';
 import Review from './Pages/Review/Review';
 import Navbar from './Pages/Shared/Navbar';
 
 function App() {
   return (
-    <div >
+    <div className='max-w-7xl mx-auto px-8' >
   <Navbar></Navbar>
   <ToastContainer/>
   <Routes>
@@ -21,6 +22,7 @@ function App() {
         <Route path="/home" element={<Home />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/review" element={<Review></Review>} />
+        <Route path="/allproduct" element={< AllProducts/>} />
         <Route path="/myportfolio" element={<MyPortfolio />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
