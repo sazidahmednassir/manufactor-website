@@ -1,10 +1,11 @@
 import React from 'react';
 import {
-    useCreateUserWithEmailAndPassword, useSignInWithGoogle, useUpdateProfile
+  useCreateUserWithEmailAndPassword, useSignInWithGoogle, useUpdateProfile
 } from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
 import { auth } from "../../firebase.init";
+import useToken from '../../hooks/useToken';
 import google from "../../Images/social/google.png";
 import Loading from "../Shared/Loading";
 
@@ -17,6 +18,7 @@ const SignUp = () => {
         error,
       ] = useCreateUserWithEmailAndPassword(auth);
       const [updateProfile, updating, updateError] = useUpdateProfile(auth);
+      const [token]  = useToken(user || gUser);
     const {
       register,
       formState: { errors },
@@ -33,6 +35,10 @@ const SignUp = () => {
   
     if(error || gError || updateError){
       signInError= <p className='text-red-500'><small>{error?.message || gError?.message }</small></p>
+  }
+
+  if(token){
+    navigate('/');
   }
   
   
