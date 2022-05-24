@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Product = ({product}) => {
+const AllProduct = ({product}) => {
     return (
         <div class="card w-96 bg-base-100 shadow-xl">
         <figure class="px-10 pt-10">
@@ -22,4 +22,4 @@ const Product = ({product}) => {
     );
 };
 
-export default Product;
+export default AllProduct;

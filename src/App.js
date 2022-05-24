@@ -10,6 +10,7 @@ import MyPortfolio from './Pages/MyPortfolio/MyPortfolio';
 import AllProducts from './Pages/Products/AllProducts';
 import PurchasePage from './Pages/Products/PurchasePage';
 import Review from './Pages/Review/Review';
+import Footer from './Pages/Shared/Footer';
 import Navbar from './Pages/Shared/Navbar';
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
         <Route path="/signup" element={<SignUp />} />
         <Route path="/products/:productid" element={  <RequireAuth><PurchasePage/></RequireAuth> } />
       </Routes>
+      <Footer/>
     </div>
   );
 }

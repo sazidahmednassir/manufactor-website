@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import { toast } from "react-toastify";
 import { auth } from "../../firebase.init";
 
-const PurchasePage = ({ setReload }) => {
+const PurchasePage = () => {
   const { productid } = useParams();
   const [product, setProduct] = useState({});
   const [control, setControl] = useState(false);

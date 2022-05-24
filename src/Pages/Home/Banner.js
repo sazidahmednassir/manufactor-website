@@ -11,7 +11,7 @@ const Banner = () => {
           <div className="mb-5">
             <h1 class="text-5xl font-bold ">DeComputerParts</h1>
             <p class="py-6">
-              DeComputerParts Manufacturer gives you the best computer tools
+              DeComputerParts Manufacturer gives you the best computer parts
               like Keyboard, Mouse, Processor, Graphic Card & Ram.
             </p>
             <Link className="btn btn-primary w-full  lg:w-fit" to="/allproduct">
