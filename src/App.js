@@ -7,6 +7,7 @@ import Login from './Pages/Login/Login';
 import RequireAuth from './Pages/Login/RequireAuth';
 import SignUp from './Pages/Login/SignUp';
 import MyPortfolio from './Pages/MyPortfolio/MyPortfolio';
+import NotFound from './Pages/NotFound.js/NotFound';
 import AllProducts from './Pages/Products/AllProducts';
 import PurchasePage from './Pages/Products/PurchasePage';
 import Review from './Pages/Review/Review';
@@ -28,6 +29,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/products/:productid" element={  <RequireAuth><PurchasePage/></RequireAuth> } />
+        <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer/>
     </div>

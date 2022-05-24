@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Footer.css';
 
 const Footer = () => {
@@ -6,9 +7,9 @@ const Footer = () => {
         <div >
         <footer class="footer footer-center p-10 bg-base-200 text-base-content rounded my-5 ">
   <div class="grid grid-flow-col gap-4">
-    <a class="link link-hover">Blog</a> 
-    <a class="link link-hover">Review</a> 
-    <a class="link link-hover">My Portfolio</a> 
+    <Link  to='/blog' class="link link-hover">Blog</Link> 
+    <Link to='/review' class="link link-hover">Review</Link> 
+    <Link to='/myportfolio' class="link link-hover">My Portfolio</Link> 
     {/* <a class="link link-hover">Press kit</a> */}
   </div> 
   <div className='flex'>
