@@ -26,7 +26,7 @@ function App() {
         <Route path="/myportfolio" element={<MyPortfolio />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
-        <Route path="/purchasepage" element={  <RequireAuth><PurchasePage/></RequireAuth> } />
+        <Route path="/products/:productid" element={  <RequireAuth><PurchasePage/></RequireAuth> } />
       </Routes>
     </div>
   );
