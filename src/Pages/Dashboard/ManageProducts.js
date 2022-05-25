@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
+import DeleteConfirmModal from './DeleteConfirmModal';
 import ProductRow from './ProductRow';
 
 const ManageProducts = () => {
+  const [deletingProduct, setDeletingProduct] = useState(null);
     const [products, setProduct]=useState([])
     const [control, setControl]=useState(false)
 
@@ -13,7 +15,7 @@ const ManageProducts = () => {
     },[products, control])
     return (
         <div>
-             <h2 className="text-2xl">All Users: {products?.length}</h2>
+             <h2 className="text-2xl">All Products: {products?.length}</h2>
              <div class="overflow-x-auto">
         <table class="table table-compact w-full">
           <thead>
@@ -27,6 +29,7 @@ const ManageProducts = () => {
               <th>Available Quantity</th>
               <th>Minimum Quantity</th>
               <th>Supplier</th>
+              <th>Action</th>
              
              
             </tr>
@@ -39,11 +42,18 @@ const ManageProducts = () => {
                            product={product}
                           control={control}
                           setControl={setControl}
+                          setDeletingProduct={setDeletingProduct}
                            ></ProductRow>)
                        }
           </tbody>
         </table>
       </div>
+      {deletingProduct && <DeleteConfirmModal
+                deletingProduct={deletingProduct}
+                control={control}
+                setControl={setControl}
+                setDeletingProduct={setDeletingProduct}
+            ></DeleteConfirmModal>}
             
         </div>
     );
