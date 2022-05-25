@@ -81,6 +81,7 @@ const PurchasePage = () => {
         .then(data=>{
             console.log(data)
             setControl(!control)
+            toast('Order taken Suceesfully')
         })
 
     }

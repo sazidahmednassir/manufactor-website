@@ -11,6 +11,7 @@ import ManageProducts from './Pages/Dashboard/ManageProducts';
 import Modal from './Pages/Dashboard/Modal';
 import MyOrders from './Pages/Dashboard/MyOrders';
 import MyProfile from './Pages/Dashboard/MyProfile';
+import Payment from './Pages/Dashboard/Payment';
 import Home from './Pages/Home/Home';
 import Login from './Pages/Login/Login';
 import RequireAdmin from './Pages/Login/RequireAdmin';
@@ -44,6 +45,7 @@ function App() {
         <Route index element={<MyProfile></MyProfile>}></Route>
         <Route path="addreview" element={<AddReview></AddReview>}></Route>
         <Route path="myorder" element={<MyOrders></MyOrders>}></Route>
+        <Route path="payment/:id" element={<Payment></Payment>}></Route>
         <Route path="users" element={<RequireAdmin><AllUsers></AllUsers></RequireAdmin>}></Route>
         <Route path="manageorder" element={<RequireAdmin><ManageOrders></ManageOrders></RequireAdmin>}></Route>
         <Route path="addproduct" element={<RequireAdmin><AddProduct></AddProduct></RequireAdmin>}></Route>
