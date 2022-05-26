@@ -2,7 +2,7 @@ import React from 'react';
 import { toast } from 'react-toastify';
 
 
-const DeleteConfirmModal = ({deletingProduct}) => {
+const DeleteConfirmModal = ({deletingProduct, setDeletingProduct, control, setControl}) => {
     const {name, _id} = deletingProduct
     console.log(_id)
     const handleDelete = () => {
@@ -17,7 +17,8 @@ const DeleteConfirmModal = ({deletingProduct}) => {
                 console.log(data);
                 if (data.deletedCount) {
                     toast.success(`Product: ${name} is deleted.`)
-                    // setDeletingProduct(null);
+                    setDeletingProduct(null);
+                    setControl(!control)
             
                 }
             })

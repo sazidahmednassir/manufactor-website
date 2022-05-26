@@ -1,6 +1,7 @@
 import React from 'react';
+import { toast } from 'react-toastify';
 
-const MorderModal = ({deleteOrder, setDelete }) => {
+const MorderModal = ({deleteOrder, setDelete, control, setControl }) => {
     console.log(deleteOrder)
     const {tool, _id}=deleteOrder
     const handleDelete = () => {
@@ -14,8 +15,13 @@ const MorderModal = ({deleteOrder, setDelete }) => {
         })
         .then(res=>res.json())
         .then(data=>{
-            console.log('data delected')
+            if(data.deletedCount){
+                console.log('data delected')
+                toast('data delected')
+                setControl(!control)
             setDelete(null)
+            }
+            
         })
     }
 

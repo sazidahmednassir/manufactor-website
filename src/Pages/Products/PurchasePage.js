@@ -27,10 +27,7 @@ const PurchasePage = () => {
       console.log(product.minimum)
       console.log(userQuan)
 
-      if(isNaN(userQuan)){
-        return toast('Add value in Quantity')
-      }
-
+   
       if(userQuan > product.availableQuantity || userQuan <product.minimum ){
         setAgree(false)
         return toast( `Give value Greater than ${product.minimum} less than ${product.availableQuantity} `);

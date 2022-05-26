@@ -10,6 +10,7 @@ const MyOrders = () => {
   const [orders, setOrders] = useState([]);
   const navigate = useNavigate();
   const [deleteOrder, setDelete]=useState(null)
+  const [control, setControl]=useState(false)
 
   
 
@@ -34,7 +35,7 @@ const MyOrders = () => {
           setOrders(data);
         });
     }
-  }, [user]);
+  }, [user, control]);
 
   
   return (
@@ -83,6 +84,8 @@ const MyOrders = () => {
       {deleteOrder && <MorderModal 
       deleteOrder ={deleteOrder }
       setDelete={setDelete}
+      control={control}
+      setControl={setControl}
       ></MorderModal>}
     </div>
   );

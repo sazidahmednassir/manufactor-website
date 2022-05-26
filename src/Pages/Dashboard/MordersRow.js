@@ -57,14 +57,11 @@ const MordersRow = ({order, index, control, setControl}) => {
             <td>{order.address}</td>
             <td>{order.phone}</td>
             <td >{!order.paid? <button className='btn btn-xs btn-success text-red-500'>unpaid</button>: <button className='btn btn-xs btn-success'>{order.transactionId}</button>}</td>
-            <td>{order.status}</td>
+            <td className='text-success'>{order.status}</td>
             
            
             <td>{!order.paid?<button onClick={()=>{ handleDelete(order) }} className='btn btn-xs btn-success'>Delete</button>: <button onClick={()=>{ handleStatus(order) }} className='btn btn-xs btn-success'>Update</button> }</td>
-            {/* <td>{role !== 'admin' && <button  class="btn btn-xs">Make Admin</button>}</td> */}
-            {/* <label onClick={() => setDeletingProduct(product)} for="delete-confirm-modal" class="btn btn-xs py-1 my-3">Delete </label> */}
             
-            {/* <td><Link to='/modal'>Delete Product</Link></td> */}
         </tr>
     );
 };
