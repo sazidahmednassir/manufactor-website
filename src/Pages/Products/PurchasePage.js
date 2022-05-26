@@ -73,7 +73,8 @@ const PurchasePage = () => {
         fetch(`http://localhost:5000/order/${productid}`, {
             method: 'PATCH',
             headers: {
-                'content-type': 'application/json'
+                'content-type': 'application/json',
+                authorization: `Bearer ${localStorage.getItem("accessToken")}`,
             }, 
             body: JSON.stringify({order, newQuan})
         })
@@ -110,7 +111,7 @@ const PurchasePage = () => {
       <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold my-2" for="orders">
         Orders Quantity
       </label>
-      <input name='order' onBlur={handleQuantityChange} class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="orders" type="number" placeholder="Doe" defaultValue={product.minimum} />
+      <input name='order' onBlur={handleQuantityChange} class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="orders" type="number" placeholder="Minimum Quantity" defaultValue={product.minimum} />
     </div>
     <div class="form-control">
   <label class="label" for ="address">

@@ -225,9 +225,9 @@ const AddProduct = () => {
             })}
           />
           <label className="label">
-            {errors.name?.type === "required" && (
+            {errors.image?.type === "required" && (
               <span className="label-text-alt text-red-500">
-                {errors.name.message}
+                {errors.image.message}
               </span>
             )}
           </label>
