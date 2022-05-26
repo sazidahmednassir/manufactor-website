@@ -7,7 +7,7 @@ const Products = () => {
     const [Reload, setReload] = useState(false);
 
     useEffect(()=>{
-        fetch(`http://localhost:5000/products?limit=6`)
+        fetch(`https://stormy-hamlet-97462.herokuapp.com/products?limit=6`)
         .then(res=>res.json())
         .then(data=>{setProducts(data)
             setReload(!Reload)})

@@ -8,7 +8,7 @@ const MordersRow = ({order, index, control, setControl}) => {
     const handleDelete=order=>{
         const orderid=order._id;
 
-        fetch(`http://localhost:5000/order/${orderid}`, {
+        fetch(`https://stormy-hamlet-97462.herokuapp.com/order/${orderid}`, {
             method: 'DELETE',
             headers: {
                 'content-type': 'application/json',
@@ -30,7 +30,7 @@ const MordersRow = ({order, index, control, setControl}) => {
         }
 
         const orderid=order._id;
-        fetch(`http://localhost:5000/status/${orderid}`, {
+        fetch(`https://stormy-hamlet-97462.herokuapp.com/status/${orderid}`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json',

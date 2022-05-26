@@ -13,7 +13,7 @@ const MyProfile = () => {
     // console.log(profile)
     
     useEffect(()=>{
-        fetch(`http://localhost:5000/profile/${email}`, {
+        fetch(`https://stormy-hamlet-97462.herokuapp.com/profile/${email}`, {
             method: 'GET',
             headers:{
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`

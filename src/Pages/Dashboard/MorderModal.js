@@ -5,7 +5,7 @@ const MorderModal = ({deleteOrder, setDelete, control, setControl }) => {
     console.log(deleteOrder)
     const {tool, _id}=deleteOrder
     const handleDelete = () => {
-        fetch(`http://localhost:5000/myorder/${_id}`, {
+        fetch(`https://stormy-hamlet-97462.herokuapp.com/myorder/${_id}`, {
             method: 'DELETE',
             headers: {
                 'content-type': 'application/json',

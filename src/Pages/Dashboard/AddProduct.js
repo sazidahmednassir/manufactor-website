@@ -41,7 +41,7 @@ const AddProduct = () => {
                     img: img
 
                 };
-                fetch('http://localhost:5000/product', {
+                fetch('https://stormy-hamlet-97462.herokuapp.com/product', {
                     method: "POST",
                     headers: {
                       "content-type": "application/json",

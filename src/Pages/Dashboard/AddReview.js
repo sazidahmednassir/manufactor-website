@@ -25,7 +25,7 @@ const AddReview = () => {
     if(event.target.star.value==""){
         return toast('Enter Your Star')
     }
-    fetch('http://localhost:5000/review', {
+    fetch('https://stormy-hamlet-97462.herokuapp.com/review', {
         method: "POST",
         headers: {
           "content-type": "application/json",

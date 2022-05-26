@@ -5,7 +5,7 @@ const ManageOrders = () => {
     const [orders, setOrders]=useState([])
     const [control, setControl]=useState(false)
     useEffect(()=>{
-        fetch('http://localhost:5000/mangeorder', {
+        fetch('https://stormy-hamlet-97462.herokuapp.com/mangeorder', {
             
                 method: 'GET',
                 headers:{

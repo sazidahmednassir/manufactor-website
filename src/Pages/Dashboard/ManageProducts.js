@@ -8,7 +8,7 @@ const ManageProducts = () => {
     const [control, setControl]=useState(false)
 
     useEffect(()=>{
-        fetch('http://localhost:5000/products/')
+        fetch('https://stormy-hamlet-97462.herokuapp.com/products/')
         .then(res=>res.json())
         .then(data=>setProduct(data))
 

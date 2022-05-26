@@ -14,7 +14,7 @@ const PurchasePage = () => {
  
 
   useEffect(() => {
-    const url = `http://localhost:5000/products/${productid}`;
+    const url = `https://stormy-hamlet-97462.herokuapp.com/products/${productid}`;
     console.log(url);
     fetch(url)
       .then((res) => res.json())
@@ -77,7 +77,7 @@ const PurchasePage = () => {
         }
         console.log(order)
 
-        fetch(`http://localhost:5000/order/${productid}`, {
+        fetch(`https://stormy-hamlet-97462.herokuapp.com/order/${productid}`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json',

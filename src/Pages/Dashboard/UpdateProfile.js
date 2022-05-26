@@ -43,7 +43,7 @@ const UpdateProfile = () => {
             return toast('Enter Your Facebook link')
         }
 
-        const url=`http://localhost:5000/users/${email}`
+        const url=`https://stormy-hamlet-97462.herokuapp.com/users/${email}`
         fetch(url, {
             method: "PUT",
             headers: {

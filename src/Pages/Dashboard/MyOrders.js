@@ -16,7 +16,7 @@ const MyOrders = () => {
 
   useEffect(() => {
     if (user) {
-      fetch(`http://localhost:5000/orders?user=${user?.email}`, {
+      fetch(`https://stormy-hamlet-97462.herokuapp.com/orders?user=${user?.email}`, {
         method: "GET",
         headers: {
           authorization: `Bearer ${localStorage.getItem("accessToken")}`,
