@@ -2,8 +2,8 @@ import React from 'react';
 
 const Business = () => {
     return (
-        <div>
-            <h4 className='text-2xl text-primary text-center sm:w-full px-32 
+        <div class="w-full mx-5 lg:mx-0">
+            <h4 className='my-3 text-2xl text-primary text-center sm:w-full px-32 
            lg:my-12'>Our Business Summary</h4>
             <div class="stats stats-vertical lg:stats-horizontal shadow  my-5  w-full">
   

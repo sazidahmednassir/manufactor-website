@@ -102,15 +102,15 @@ const PurchasePage = () => {
         </figure>
         <div class="card-body">
           <h2 class="card-title font-bold"> Product Name : {product?.name}</h2>
-          <h3 class="card-title font-bold text-red-500">
+          <h3 class="card-title font-bold ">
             
             Product Price : {product?.price}
           </h3>
-          <h3 class="card-title text-green-500">
+          <h3 class="card-title font-bold">
             
             Available Quantity : {product.availableQuantity}
           </h3>
-          <h3 class="card-title font-bold text-yellow-500">Minimum order quantity : {product.minimum}</h3>
+          <h3 class="card-title font-bold text-red-500">Minimum order quantity : {product.minimum}</h3>
           <form onSubmit={handleOrder} className='flex flex-col w-full max-w-lg m-auto '  >
           <input type="text" placeholder="Type here" class="input input-bordered input-accent w-full max-w-xs"  value={user?.displayName}/>
           <input type="text" placeholder="Type here" class="input input-bordered input-accent w-full max-w-xs my-2"  value={user?.email}/>

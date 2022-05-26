@@ -10,8 +10,8 @@ const Review = () => {
         .then(data=>setReview(data))
     },[reviews])
     return (
-        <div>
-            <h4 className='text-2xl text-primary text-center sm:w-full px-32 
+        <div class="w-full mx-5 lg:mx-0">
+            <h4 className='my-3 lg:mx-0 text-2xl text-primary text-center sm:w-full px-32 
            lg:my-12'>Our Reviews</h4>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
             {
