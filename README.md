@@ -1,70 +1,32 @@
-# Getting Started with Create React App
+# DeComputerParts
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Live Website Link
 
-## Available Scripts
+Live Website Link: https://decomputerparts.web.app/
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- My webApp shows DeComputerParts Tools, Add Tools , Blog, Admin features, Payment integration via stripe, create & login user via firebase
+- You can view 6 tools data in homepage , you can not order below minimun quantity , id you do order buuton will be diabled.
+- Anyone create account .
+- Anyone can Log in.
+- Only verified user can show the my order, add review, pay payment
+- Only verified admin can manage order & Tools or products, he can delete order or can update status for any order.
+- Also made admin any user.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## What I used this project?
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- I used Tailwind css & Daisy ui for my entire project design
+- Used React library to make my website fast & mobile-friendly
+- For Authentication like Log in, Sign Up, I used firebase
+- Also used react firebase hooks & react router dom hooks for make work easy
+- Also Used react toaster for to show popup to the user
+- I used JWT for user verification and also user access to my item
+- Also use custom admin function for admin access
+- I used Stripe for Payment Integation
+  -Also used react query & react from
+  -For Image url I used imgbb
+- For Backened I used Nodejs
+- For database I used Mongodb
+- For Server site server I used Heroku
+- For Client site server I used firebase
