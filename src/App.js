@@ -21,6 +21,7 @@ import MyPortfolio from './Pages/MyPortfolio/MyPortfolio';
 import NotFound from './Pages/NotFound.js/NotFound';
 import AllProducts from './Pages/Products/AllProducts';
 import PurchasePage from './Pages/Products/PurchasePage';
+import ResetPassword from './Pages/ResetPassword/ResetPassword';
 import Review from './Pages/Review/Review';
 import Footer from './Pages/Shared/Footer';
 import Navbar from './Pages/Shared/Navbar';
@@ -39,6 +40,7 @@ function App() {
         <Route path="/myportfolio" element={<MyPortfolio />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
+        <Route path="/reset" element={<ResetPassword />} />
       
         <Route path="/products/:productid" element={  <RequireAuth><PurchasePage/></RequireAuth> } />
         <Route path="/dashboard" element={  <RequireAuth><Dashboard/></RequireAuth> } >

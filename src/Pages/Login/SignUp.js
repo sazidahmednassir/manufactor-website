@@ -150,6 +150,7 @@ const SignUp = () => {
               />
             </form>
             <p><small>Already have an account? <Link className='text-primary px-2' to="/login">Please login</Link></small></p>
+          
             <div class="divider">OR</div>
             <button class="btn btn-outline" onClick={() => signInWithGoogle()}>
               <img style={{ width: "30px" }} src={google} alt="" />

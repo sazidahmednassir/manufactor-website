@@ -129,6 +129,7 @@ const Login = () => {
             />
           </form>
           <p><small>New to DeComputerParts<Link className='text-primary px-2' to="/signup">Create New Account Here</Link></small></p>
+          <p><small> <Link className='text-primary px-2' to="/reset">Reset Password</Link></small></p>
           <div class="divider">OR</div>
           <button class="btn btn-outline" onClick={() => signInWithGoogle()}>
             <img style={{ width: "30px" }} src={google} alt="" />
