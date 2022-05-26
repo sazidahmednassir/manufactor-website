@@ -3,11 +3,13 @@ import React, { useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { Link, useNavigate } from "react-router-dom";
 import { auth } from "../../firebase.init";
+import MorderModal from "./MorderModal";
 
 const MyOrders = () => {
   const [user] = useAuthState(auth);
   const [orders, setOrders] = useState([]);
   const navigate = useNavigate();
+  const [deleteOrder, setDelete]=useState(null)
 
   
 
@@ -33,6 +35,8 @@ const MyOrders = () => {
         });
     }
   }, [user]);
+
+  
   return (
     <div>
       <h1 className="my-5">My Orders: {orders.length}</h1>
@@ -48,6 +52,7 @@ const MyOrders = () => {
               <th>Total Price</th>
               <th>Quantity</th>
               <th>Payment</th>
+              <th>Action</th>
             </tr>
           </thead>
           <tbody>
@@ -68,12 +73,17 @@ const MyOrders = () => {
                                     </div>
                                         
                                     } </td>
-
+                                    <td>{(o.price && !o.paid) && <label onClick={()=>{setDelete(o)}} for="delete-modal" class="btn btn-xs btn-success">Cancel</label>}</td>
+                                    
               </tr>
             ))}
           </tbody>
         </table>
       </div>
+      {deleteOrder && <MorderModal 
+      deleteOrder ={deleteOrder }
+      setDelete={setDelete}
+      ></MorderModal>}
     </div>
   );
 };

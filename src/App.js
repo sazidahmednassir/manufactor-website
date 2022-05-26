@@ -8,7 +8,6 @@ import AllUsers from './Pages/Dashboard/AllUsers';
 import Dashboard from './Pages/Dashboard/Dashboard';
 import ManageOrders from './Pages/Dashboard/ManageOrders';
 import ManageProducts from './Pages/Dashboard/ManageProducts';
-import Modal from './Pages/Dashboard/Modal';
 import MyOrders from './Pages/Dashboard/MyOrders';
 import MyProfile from './Pages/Dashboard/MyProfile';
 import Payment from './Pages/Dashboard/Payment';
@@ -40,7 +39,7 @@ function App() {
         <Route path="/myportfolio" element={<MyPortfolio />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
-        <Route path="/modal" element={<Modal />} />
+      
         <Route path="/products/:productid" element={  <RequireAuth><PurchasePage/></RequireAuth> } />
         <Route path="/dashboard" element={  <RequireAuth><Dashboard/></RequireAuth> } >
         <Route index element={<MyProfile></MyProfile>}></Route>
