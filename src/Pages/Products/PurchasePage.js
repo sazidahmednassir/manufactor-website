@@ -27,6 +27,10 @@ const PurchasePage = () => {
       console.log(product.minimum)
       console.log(userQuan)
 
+      if(isNaN(userQuan)){
+        return toast('Add value in Quantity')
+      }
+
       if(userQuan > product.availableQuantity || userQuan <product.minimum ){
         setAgree(false)
         return toast( `Give value Greater than ${product.minimum} less than ${product.availableQuantity} `);
@@ -38,11 +42,15 @@ const PurchasePage = () => {
 
     const handleOrder = event => {
         event.preventDefault();
+        
         const upQuan= parseInt(event.target.order.value)
         const newQuan= product.availableQuantity- upQuan;
         const total=product?.price * upQuan;
         console.log('hello')
         console.log(newQuan)
+        console.log(upQuan)
+
+      
 
         if(event.target.address.value=="" && event.target.phone.value=="" ){
             return toast('Enter Your Address & Phone Number')
@@ -53,7 +61,9 @@ const PurchasePage = () => {
         }
 
         if(event.target.phone.value==""){
+          
             return toast('Enter Your Phone Number')
+
         }
         
         let order = {

@@ -3,6 +3,7 @@ import MordersRow from './MordersRow';
 
 const ManageOrders = () => {
     const [orders, setOrders]=useState([])
+    const [control, setControl]=useState(false)
     useEffect(()=>{
         fetch('http://localhost:5000/mangeorder', {
             
@@ -14,7 +15,7 @@ const ManageOrders = () => {
         .then(res=>res.json())
         .then(data=>{setOrders(data)
         console.log(data)})
-    },[orders])
+    },[orders, control])
     return (
         <div>
              <h2 className="text-2xl">All Products: {orders?.length}</h2>
@@ -48,7 +49,7 @@ const ManageOrders = () => {
                            ></ProductRow>)
                        } */}
                        {
-                           orders?.map((order, index)=><MordersRow index={index} key={order._id} order={order}></MordersRow>)
+                           orders?.map((order, index)=><MordersRow index={index} key={order._id} order={order} control={control} setControl={setControl}></MordersRow>)
                        }
           </tbody>
         </table>
