@@ -26,10 +26,10 @@ const DeleteConfirmModal = ({deletingProduct, setDeletingProduct, control, setCo
 
 
     return (
-       <div >
+       <div  >
            
-         <input type="checkbox" id="delete-confirm-modal" class="modal-toggle" />
-        <div class="modal modal-bottom sm:modal-middle">
+         <input type="checkbox" id="delete-confirm-modal" class="modal-toggle " />
+        <div class="modal modal-bottom sm:modal-middle ">
           <div class="modal-box">
             <h3 class="font-bold text-lg text-red-600">Are you sure you want to delete  ${name}!</h3>
             <p class="py-4">Data will remove Permanently</p>

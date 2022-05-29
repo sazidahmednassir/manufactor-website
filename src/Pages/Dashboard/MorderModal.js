@@ -30,7 +30,7 @@ const MorderModal = ({deleteOrder, setDelete, control, setControl }) => {
         <div>
     
 <input type="checkbox" id="delete-modal" class="modal-toggle" />
-<div class="modal modal-bottom sm:modal-middle">
+<div class="modal modal-bottom sm:modal-middle ">
   <div class="modal-box">
     <h3 class="font-bold text-lg">Are you sure you want to delete  ${tool}!!</h3>
     <p class="py-4">Data will remove Permanently You will not see the data</p>
