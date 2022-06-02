@@ -1,0 +1,11 @@
+@media only screen and (max-width: 768px) {
+  .hero {
+    display: grid;
+    width: 100%;
+    place-items: center;
+    background-size: cover;
+    background-position: center;
+    align-content: center;
+    justify-content: center;
+  }
+}

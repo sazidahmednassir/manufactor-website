@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import banner from "../../Images/banner/banner.jpeg";
+import './Banner.css';
 
 const Banner = () => {
   return (
@@ -8,7 +9,7 @@ const Banner = () => {
       <div class="hero min-h-screen ">
         <div class="hero-content flex-col lg:flex-row-reverse">
           <img src={banner} class="max-w-sm rounded-lg shadow-2xl" />
-          <div className="mb-5">
+          <div className="mb-5 mx-2 cus">
             <h1 class="text-5xl font-bold ">DeComputerParts</h1>
             <p class="py-6">
               DeComputerParts Manufacturer gives you the best computer parts

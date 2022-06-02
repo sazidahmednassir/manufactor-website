@@ -1,15 +1,22 @@
 import React, { useEffect, useState } from 'react';
+import Loading from '../Shared/Loading';
 import AllProduct from './AllProduct';
 
 const AllProducts = () => {
     const [products, setProduct]=useState([])
+    const [Reload, setReload] = useState(true);
 
     useEffect(()=>{
         fetch('https://stormy-hamlet-97462.herokuapp.com/products/')
         .then(res=>res.json())
-        .then(data=>setProduct(data))
+        .then(data=>{setProduct(data)
+            setReload(false)})
 
     },[])
+
+    if(Reload){
+        return <Loading></Loading>
+    }
     return (
         <div>
            <h4 className='text-4xl text-primary text-center sm:w-full px-32 mx-5 
